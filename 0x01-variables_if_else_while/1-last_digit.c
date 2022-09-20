@@ -2,32 +2,33 @@
 #include <time.h>
 #include <stdio.h>
 
+/* betty style doc for function main goes there */
 /**
-* main - program entry point
-*
-* Description: program checks for last digit of entered number
-*
-* Return: 0
-*/
-
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int n, lastnum;
+	int n;
+	int r;
 
 	srand(time(0));
-	lastnum = n % 10;
-	n = rand() - RAND_MAX / 2;	
-	if (lastnum > 5)
+	n = rand() - RAND_MAX / 2;
+
+	r = n % 10;
+	if (r > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, lastnum);
+		printf("Last digit of %i is %i and is greater than 5\n", n, r);
 	}
-	else if (lastnum == 0)
+	else if (r == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, lastnum);
+		printf("Last digit of %i is %i and is 0\n", n, r);
 	}
 	else if (lastnum < 6)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastnum);
+		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, r);
 	}
+
 	return (0);
 }
