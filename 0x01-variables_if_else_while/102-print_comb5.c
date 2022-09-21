@@ -12,9 +12,10 @@ int main(void)
 {
 	int i, j, k, l;
 
-	i = j;
-	k = 48;
-	l = 49;
+	i = 48;
+	j = 49;
+	k = 50;
+	l = 51;
 	while  ((i < 58))
 	{
 		putchar(i);
